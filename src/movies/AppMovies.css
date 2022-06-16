@@ -1,0 +1,68 @@
+:root {
+    --c-main-green: #67ba67;
+    --c-shadow-green: rgba(103, 186, 103, 0.51);
+}
+
+body {
+    min-height: 100vh;
+}
+
+.root-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.bg-grad-green {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 29%, rgba(45,253,79,0.7959558823529411) 100%);
+    color: white;
+}
+.bg-grad-green-reverse {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(45,253,79,0.7959558823529411) 10%, rgba(34,193,195,1) 100%);
+    color: white;
+}
+
+.btn-green {
+    background-color: var(--c-main-green);
+    color: white;
+}
+
+.btn-green:hover, .btn-green:focus {
+    color: white;
+    box-shadow: 0 0 0 0.2rem var(--c-shadow-green);
+}
+
+.form-control:focus {
+    border-color: var(--c-main-green);
+    box-shadow: 0 0 0 0.2rem var(--c-shadow-green);
+}
+
+.custom-control-input:focus~.custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem var(--c-shadow-green);
+}
+
+.custom-control-input:focus:not(:checked)~.custom-control-label::before {
+    border-color: var(--c-main-green);
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: var(--c-main-green);
+    background-color: var(--c-main-green);
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.movie-poster {
+    object-fit: contain;
+}
